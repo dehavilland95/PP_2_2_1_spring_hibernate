@@ -27,7 +27,7 @@ public class MainApp {
         user4.setCar(new Car("Model 4", 4));
         userService.add(user4);
 
-        List<User> users = userService.listUsers();
+        List<User> users = userService.listAll();
         for (User user : users) {
             System.out.println("Id = " + user.getId());
             System.out.println("First Name = " + user.getFirstName());
@@ -38,7 +38,7 @@ public class MainApp {
             System.out.println();
         }
 
-        User user = userService.getUserByCarModelAndSeries("Model 2", 2);
+        User user = userService.getByCarModelAndSeries("Model 2", 2);
         if (user != null) {
             System.out.println(user.getFirstName());
         }
